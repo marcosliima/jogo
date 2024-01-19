@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+.area-jogo{
+    width: 100%;
+    height: 100vh;
+    max-width: 1920px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    border-bottom: 15px solid #414B4F;
+}
+
+.explica {
+    position: absolute;
+    top: 50%;
+    font-size: 46px;
+    margin: auto;
+    margin-left: auto;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.explica span{
+    font-size: 25px;
+}
+
+.game-over{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.game-over p {
+    font-size: 50px; 
+    text-align: center;
+}
+
+.game-over p > strong {
+    font-size: 70px;
+}
+.clouds{
+    position: absolute;
+    max-width: 700px;
+    top: 15%;
+    animation: clouds-animation 20s infinite linear;
+}
+
+
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    right: -500px;
+    z-index: 10;
+}
+
+.play {
+    animation: cano 1s infinite linear;
+}
+
+.oculto{
+    display: none;
+}
+
+
+.mario{
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    left: 80px;
+    z-index: 10;
+}
+
+
+.pulo {
+    animation: mario 700ms ease-out;
+}
+
+
+.house {
+    position: absolute;
+    bottom: -17px;
+    width: 700px;
+    z-index: 50;
+    right: -700px;
+    transition: ease-in-out;
+}
+
+.animada {
+    animation: casa-animation 1s;
+    right: -80px;
+}
+
+.chegada {
+animation: chegada 2s ease-out;
+animation-delay: 1s;
+
+
+}
+
+
+
+/* Animações */
+
+@keyframes cano {
+    from{
+       right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+    
+}
+
+@keyframes mario {
+    0% {
+        bottom: 0;
+    }
+    
+    40% {
+        bottom: 250px;
+    }
+
+    50%{
+        bottom: 250px;
+    }
+
+    60%{
+        bottom: 250px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -700px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+
+@keyframes casa-animation {
+    from{
+        right: -700px
+    }
+
+    to{
+        right: -80px;
+    }
+}
+
+@keyframes chegada {
+	from {
+		left: 80px;
+	}
+
+	to{
+		left: 100%;
+	}
+}
